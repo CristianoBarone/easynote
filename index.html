@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            div,
+            html,
+            body {
+                background-color: rgb(255, 249, 230);
+                overflow: hidden;
+                margin: 0;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
+            br {
+                user-select: none;
+            }
+            hr {
+                user-select: none;
+                height: 3px;
+                margin: 0;
+                border: none;
+                border-radius: 5rem;
+                background-color: rgb(145, 145, 145);
+            }
+        </style>
+    </head>
+    <body id="body">
+        <div style="float:left; width: 80px; height: 100%; background-color: white; margin-right: 10px; display: grid; place-items: center; z-index: 10;">
+            <div style="background-color: white;">
+                <!--<a style="display: block;" onclick="window.backend.alwaysOnTop = !window.backend.alwaysOnTop"><svg width="30" height="30" viewBox="0 0 60 60" style="background-color: white"><path fill="#555" d="M52.963,21.297c-0.068-0.329-0.297-0.603-0.609-0.727c-8.574-3.416-16.173-0.665-18.361,0.288L19.114,8.2
+                    c0.52-4.568-1.944-7.692-2.054-7.828C16.881,0.151,16.618,0.016,16.335,0c-0.282-0.006-0.561,0.091-0.761,0.292L0.32,15.546
+                    c-0.202,0.201-0.308,0.479-0.291,0.765c0.016,0.284,0.153,0.549,0.376,0.726c2.775,2.202,6.349,2.167,7.726,2.055l12.721,14.953
+                    c-0.868,2.23-3.52,10.27-0.307,18.337c0.124,0.313,0.397,0.541,0.727,0.609c0.067,0.014,0.135,0.021,0.202,0.021
+                    c0.263,0,0.518-0.104,0.707-0.293l14.57-14.57l13.57,13.57c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
+                    c0.391-0.391,0.391-1.023,0-1.414l-13.57-13.57l14.527-14.528C52.929,21.969,53.031,21.627,52.963,21.297z M35.314,36.755
+                    L21.89,50.18c-2.437-8.005,0.993-15.827,1.03-15.909c0.158-0.353,0.1-0.765-0.15-1.059L9.31,17.39
+                    c-0.191-0.225-0.473-0.352-0.764-0.352c-0.051,0-0.103,0.004-0.154,0.013c-0.036,0.006-3.173,0.472-5.794-0.955l13.5-13.5
+                    c0.604,1.156,1.391,3.26,0.964,5.848C17.004,8.79,17.133,9.141,17.4,9.368l15.785,13.43c0.309,0.262,0.748,0.309,1.105,0.128
+                    c0.077-0.04,7.378-3.695,15.869-1.017L35.314,36.755z"/></svg></a> <div style="width: 3px;height: 3px;background-color: black;position: absolute;left:  30px;top: 200px;"></div>
+                <br />-->
+                <a style="display: block;" onclick="window.localStorage.setItem('notes', document.getElementById('Container').innerHTML)"><svg width="30" height="30" viewBox="0 0 60 60" style="background-color: white" fill="#555"><path d="M39.914,0H37.5h-28h-9v49h7h33h8V8.586L39.914,0z M35.5,2v14h-24V2H35.5z M9.5,47V28h29v19H9.5z M46.5,47h-6V26h-33v21h-5
+                        V2h7v16h28V2h1.586L46.5,9.414V47z"/>
+                    <path d="M13.5,33h7c0.553,0,1-0.447,1-1s-0.447-1-1-1h-7c-0.553,0-1,0.447-1,1S12.947,33,13.5,33z"/>
+                    <path d="M23.5,35h-10c-0.553,0-1,0.447-1,1s0.447,1,1,1h10c0.553,0,1-0.447,1-1S24.053,35,23.5,35z"/>
+                    <path d="M25.79,35.29c-0.181,0.189-0.29,0.45-0.29,0.71s0.109,0.52,0.29,0.71C25.979,36.89,26.229,37,26.5,37
+                        c0.26,0,0.52-0.11,0.71-0.29c0.18-0.19,0.29-0.45,0.29-0.71s-0.11-0.521-0.29-0.71C26.84,34.92,26.16,34.92,25.79,35.29z"/>
+                    <path d="M33.5,4h-6v10h6V4z M31.5,12h-2V6h2V12z"/></svg></a>
+                <br />
+                <a style="display: block;" onclick="document.getElementById('Container').innerHTML = ''"><svg width="30" height="30" viewBox="0 0 60 60" style="background-color: white" fill="#555"><path d="M52.5,6H38.456c-0.11-1.25-0.495-3.358-1.813-4.711C35.809,0.434,34.751,0,33.499,0H23.5c-1.252,0-2.31,0.434-3.144,1.289
+                    C19.038,2.642,18.653,4.75,18.543,6H6.5c-0.552,0-1,0.447-1,1s0.448,1,1,1h46c0.552,0,1-0.447,1-1S53.052,6,52.5,6z M21.792,2.681
+                    C22.24,2.223,22.799,2,23.5,2h9.999c0.701,0,1.26,0.223,1.708,0.681c0.805,0.823,1.128,2.271,1.24,3.319H20.553
+                    C20.665,4.952,20.988,3.504,21.792,2.681z"/>
+                <path d="M10.456,54.021C10.493,55.743,11.565,59,15.364,59h28.272c3.799,0,4.871-3.257,4.907-4.958L50.376,10H8.624L10.456,54.021z
+                     M48.291,12l-1.747,41.979C46.538,54.288,46.4,57,43.636,57H15.364c-2.734,0-2.898-2.717-2.909-3.042L10.709,12H48.291z"/>
+                <path d="M17.5,54h24c0.552,0,1-0.447,1-1s-0.448-1-1-1h-24c-0.552,0-1,0.447-1,1S16.948,54,17.5,54z"/>
+                <path d="M17.5,49h24c0.552,0,1-0.447,1-1s-0.448-1-1-1h-24c-0.552,0-1,0.447-1,1S16.948,49,17.5,49z"/>
+                <path d="M17.5,44h24c0.552,0,1-0.447,1-1s-0.448-1-1-1h-24c-0.552,0-1,0.447-1,1S16.948,44,17.5,44z"/></svg></a>
+            </div>
+        </div>
+        <div style="margin-right: 10px;" onmousedown="drawing = true; console.log(drawing)" onmouseup="drawing = false; console.log(drawing)">
+            <div id="Container">
+
+            </div>
+            <div id="Backdrop"></div>
+        </div>
+        <script>
+
+            let drawing = false
+
+            function placePixel(mouseEvent) {
+                if (!drawing) return;
+                let x = mouseEvent.pageX;
+                let y = mouseEvent.pageY;
+                document.getElementById('Container').insertAdjacentHTML('beforeend', `<div style='width: 3px;height: 3px;border-radius:100%;background-color: black;position: absolute;left: ${x}px; top: ${y}px; z-index: 9;'></div>`)
+            }
+
+            document.getElementById("body").onmousemove = placePixel;
+
+            if (window.localStorage.getItem('notes') != null) {
+                document.getElementById("Container").innerHTML = window.localStorage.getItem('notes')
+            }
+
+            window.onresize = function ()
+            {
+                console.log(window.innerHeight)
+                document.getElementById("Backdrop").innerHTML = ""
+                for (i = 0; i < Math.round(window.innerHeight / 44) + 1; ++i) {
+                    document.getElementById("Backdrop").insertAdjacentHTML('beforeend', '<br /><br /><hr />')
+                }
+            }
+        </script>
+    </body>
+</html>
